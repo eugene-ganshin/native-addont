@@ -1,11 +1,12 @@
 {
   "name": "native-addon",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.6",
+  "description": "prove of concept",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "configure": "node-gyp configure",
-    "build": "node-gyp build"
+    "preinstall": "node-gyp rebuild",
+    "install": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^4.2.0",
-    "node-gyp": "^8.2.0"
+    "node-gyp": "^8.2.0",
+    "@types/node": "^16.10.3"
   }
 }
