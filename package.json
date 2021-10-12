@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "configure": "node-gyp configure",
+    "build": "node-gyp build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/eugene-ganshin/native-addont/issues"
   },
-  "homepage": "https://github.com/eugene-ganshin/native-addont#readme"
+  "homepage": "https://github.com/eugene-ganshin/native-addont#readme",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^4.2.0",
+    "node-gyp": "^8.2.0"
+  }
 }
