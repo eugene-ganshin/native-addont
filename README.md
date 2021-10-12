@@ -1,2 +1,1 @@
-- Running the program:
-  node app.js
+Make sure to have python and cpp compiler.
