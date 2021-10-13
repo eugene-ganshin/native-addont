@@ -1,9 +1,5 @@
-interface IGreet {
-  greetHello: (str: string) => void;
-}
+type Greet = (num1: number, num2: number) => number;
 
-type GreetHello = (str: string) => void;
+const addon = require("bindings")("swap-nums");
 
-const addon: IGreet = require("bindings")("greet");
-
-export const greet: GreetHello = addon.greetHello;
+export const greet: Greet = addon.swapNums;

@@ -1,6 +1,6 @@
 {
   "name": "native-addon",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "prove of concept",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

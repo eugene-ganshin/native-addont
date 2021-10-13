@@ -1,11 +1,11 @@
 {
     "targets": [
         {
-            "target_name": "greet",
+            "target_name": "swap-nums",
             "cflags!": ["-fno-excpetions"],
             "cflags_cc!": ["-fno-excpetions"],
             "sources": [
-                "./src/greeting.cpp",
+                "./src/swap-nums.c",
                 "./src/index.cpp"
             ],
             "include_dirs": [

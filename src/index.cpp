@@ -1,21 +1,21 @@
 #include <napi.h>
-#include <string>
-#include "greeting.h"
+#include "swap-nums.h"
 
-Napi::String greetHello(const Napi::CallbackInfo &info)
+Napi::Number swapNums(const Napi::CallbackInfo &info)
 {
     Napi::Env env = info.Env();
 
-    // gets the argument passed from node side and converts it to string
-    std::string user = (std::string)info[0].ToString();
-    std::string result = helloUser(user);
+    int swap1 = info[0].ToNumber();
+    int swap2 = info[1].ToNumber();
 
-    return Napi::String::New(env, result);
+    swapNumbers(&swap1, &swap2);
+
+    return Napi::Number::New(env, swap1);
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)
 {
-    exports.Set(Napi::String::New(env, "greetHello"), Napi::Function::New(env, greetHello));
+    exports.Set(Napi::String::New(env, "swapNums"), Napi::Function::New(env, swapNums));
 
     return exports;
 }
