@@ -1,5 +1,13 @@
-type Greet = (num1: number, num2: number) => number;
+interface ILtApi {
+  openConnection: () => number;
+  query: () => number;
+  closeConnection: () => number;
+}
 
-const addon = require("bindings")("swap-nums");
+const addon: ILtApi = require("bindings")("ltApi");
 
-export const greet: Greet = addon.swapNums;
+console.log(addon.openConnection());
+
+// Need to pass env variables via JS?
+// TS should have error handler and receive error data from c++ layer?
+// // Can try to return error object from c++ layer and just throw it from node.

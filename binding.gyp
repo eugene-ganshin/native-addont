@@ -1,11 +1,13 @@
 {
     "targets": [
         {
-            "target_name": "swap-nums",
+            "target_name": "ltApi",
             "cflags!": ["-fno-excpetions"],
             "cflags_cc!": ["-fno-excpetions"],
             "sources": [
-                "./src/swap-nums.c",
+                "./lib/ltCmn.c",
+                "./lib/ltMsg.c",
+                "./lib/ltClntU.c",
                 "./src/index.cpp"
             ],
             "include_dirs": [
